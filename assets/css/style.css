@@ -518,7 +518,7 @@ h3 {
 }
 
 .input-field {
-	width: 50%;
+	width: 20vw;
 	height: 55px;
 	background: transparent;
 	border: 2px solid #AAA;
@@ -721,6 +721,6 @@ footer {
 	}
 
 	.input-field {
-		width: 100%;
+		width: 25vw;
 	}
 }

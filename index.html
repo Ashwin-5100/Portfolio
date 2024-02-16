@@ -243,19 +243,23 @@
                             <p><i class="uil uil-phone"></i> Mob: 832 919 7971</p>
                         </div>
                     </div>
+
                     <div class="col">
-                        <div class="form-control">
-                            <div class="form-inputs">
-                                <input type="text" class="input-field" placeholder="Name">
-                                <input type="text" class="input-field" placeholder="Email">
+                        <form action="#">
+                            <div class="form-control">
+                                <div class="form-inputs">
+                                    <input type="text" class="input-field" placeholder="Name" id="name">
+                                    <input type="email" class="input-field" placeholder="Email" id="email">
+                                </div>
+                                <div class="text-area">
+                                    <textarea placeholder="Message" id="Message"></textarea>
+                                </div>
+                                <div class="form-button">
+                                    <button class="btn" type="submit">Send <i class="uil uil-message"></i></button>
+                                    <!-- <button type="submit">Send</button> -->
+                                </div>
                             </div>
-                            <div class="text-area">
-                                <textarea placeholder="Message"></textarea>
-                            </div>
-                            <div class="form-button">
-                                <button class="btn">Send <i class="uil uil-message"></i></button>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </section>
@@ -298,6 +302,9 @@
 
 
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- ----- TYPING JS Link ----- -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>

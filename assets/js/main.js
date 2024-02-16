@@ -67,6 +67,41 @@ sr.reveal('.top-header', {})
 /* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
 
 /* -- ABOUT INFO & CONTACT INFO -- */
+
+
+const form = document.querySelector("form");
+const fullName = document.getElementById("name");
+const email_Send = document.getElementById("email");
+const message = document.getElementById("Message");
+
+function sendEmail() {
+  const bodyMessage = `Full Name:  ${fullName.value} <br> Email:  ${email_Send.value} <br> Message:  ${message.value}`;
+
+  Email.send({
+    SecureToken: "feaf88ad-c59d-4bc6-a89f-9578dd3354e4",
+    To: 'ashwinlavate20@gmail.com',
+    From: "ashwinlavate20@gmail.com",
+    Subject: "Message on Portfolio",
+    Body: bodyMessage
+  }).then(
+    message => {
+      if (message == "OK") {
+        Swal.fire({
+          title: "Success!",
+          text: "Message send Successfully!",
+          icon: "success"
+        });
+      }
+    }
+  );
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  sendEmail();
+});
+
 const srLeft = ScrollReveal({
   origin: 'left',
   distance: '80px',
@@ -87,7 +122,6 @@ const srRight = ScrollReveal({
 
 srRight.reveal('.skills-box', { delay: 100 })
 srRight.reveal('.form-control', { delay: 100 })
-
 
 
 /* ----- CHANGE ACTIVE LINK ----- */
